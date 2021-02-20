@@ -137,4 +137,108 @@
   }
 }
 //end promo
- 
+//start products
+.products{
+  position: relative;
+  &__form{
+    box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.08);
+    width: 100%;
+    max-width: 1140px;
+    min-height: 135px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    border-radius: 6px;
+    position: relative;
+    top: -70px;
+    background-color: #fff;
+    z-index: 5;
+    &::before{
+      content: '';
+      margin: 0 auto;
+      width: 98%;
+      height: 100%;
+      display: block;
+      position: absolute;
+      border-radius: 6px;
+      background-color: rgba(255, 255, 255, .75);
+      left: 0;
+      right: 0;
+      z-index: -1;
+      top: -13px;
+    }
+    &::after{
+      content: '';
+      margin: 0 auto;
+      width: 96%;
+      height: 100%;
+      display: block;
+      position: absolute;
+      border-radius: 6px;
+      background-color: rgba(255, 255, 255, .45);
+      left: 0;
+      right: 0;
+      z-index: -2;
+      top: -26px;
+    }
+    input{
+      height: 55px;
+      padding-right: 220px;
+      padding-left: 30px;
+      border: 1px solid #dcdcdc;
+      border-radius: 4px;
+      position: relative;
+      max-width: 810px;
+      width: 100%;
+    }
+    select{
+      height: 55px;
+      border: 1px solid #dcdcdc;
+      border-top-right-radius: 4px;
+      border-bottom-right-radius: 4px;
+      padding-right: 75px;
+      padding-left: 20px;
+      position: absolute;
+      right: 290px;
+    }
+    button{
+      height: 55px;
+      padding: 0px 70px;
+      cursor: pointer;
+      background-color: $blue;
+      color: #fff;
+      border-radius: 4px;
+      border: none;
+    }
+  }
+}
+.products__inner{
+  display: flex;
+  justify-content: space-between;
+  padding: 110px 0px;
+}
+.products__item{
+  max-width: 362px;
+  width: 100%;
+  padding: 40px 35px 50px 35px;
+  text-align: center;
+  transition: all .5s;
+  &:hover{
+    box-shadow: 0px 2px 50px 0px rgba(0, 0, 0, 0.08);
+    border-radius: 4px;
+  }
+  &-title{
+    font-size: 24px;
+    color: #000;
+    font-weight: 500;
+    margin-bottom: 25px;
+  }
+  &-images{
+    background-image: url(../images/products/product-item1.png);
+    height: 120px;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-bottom: 35px;
+  }
+}
+//end products
