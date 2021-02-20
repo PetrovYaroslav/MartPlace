@@ -1,8 +1,100 @@
-html{
-    box-sizing: border-box;
+@import 'vars';
+@import 'global';
+
+//start header
+
+.header__top{
+  background-color: $bg;
+  &-inner{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+  }
 }
-*,
-*::before,
-*::after{
-    box-sizing: inherit;
+.header__btn{
+  margin-left: auto;
+  font-size: 14px;
+  line-height: 28px;
+  color: #fff;
+  padding: 4px 18px;
+  background-color: $blue;
+  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.1);
+  border-radius: 17px;
 }
+.header__box{
+  margin: 0px 50px;
+}
+.header__icon-btn + .header__icon-btn{
+  margin-left: 35px;
+}
+.profile{
+  display: flex;
+  align-items: center;
+  line-height: 22px;
+  color: #333;
+  &__avatar{
+    margin-right: 22px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-image: url();
+    background-color: #7c7979;
+  }
+  &__info-money{
+    color: $blue;
+  }
+}
+.header__menu{
+  &-inner{
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+.menu__list{
+   text-transform: uppercase;
+   li{
+     display: inline-block;
+     & + li{
+       margin-left: 35px;
+     }
+   }
+   a{
+     color: #333333;
+     font-weight: 500;
+     font-size: 15px;
+   }
+}
+.menu__form{
+  font-size: 15px;
+  position: relative;
+  input{
+    line-height: 30px;
+    padding: 7px 95px 7px 27px;
+    border: 1px solid #898f96;
+    border-radius: 21px;
+    outline: transparent;
+    color: #333;
+    &:focus{
+      border: 1px solid #333
+    }
+    &::placeholder{
+      color: #898f96;
+    }
+  }
+  button{
+    background-color: $blue;
+    border: none;
+    width: 70px;
+    height: 46px;
+    border-radius: 21px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    outline: none;
+    cursor: pointer;
+  }
+}
+//end header
